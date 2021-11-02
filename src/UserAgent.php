@@ -18,12 +18,12 @@ class UserAgent
     protected $prefix;
     protected $version;
     protected $engine;
-    protected $device = 'Desktop';
+    protected $device = 'Undefined';
     protected $isBot = false;
 
     protected $oss = [
-        'Android' => ['Android'],
         'Linux' => ['linux', 'Linux'],
+        'Android' => ['Android'],
         'Mac OS X' => ['Macintosh', 'Mac OS X'],
         'iOS' => ['like Mac OS X'],
         'Windows' => ['Windows NT', 'win32'],
@@ -33,7 +33,7 @@ class UserAgent
     protected $browsers = [
         'Apple Safari' => ['Safari'],
         'Google Chrome' => ['Chrome'],
-        'Edge' => ['Edge'],
+        'Edge' => ['Edge', 'Edg'],
         'Internet Explorer' => ['MSIE'],
         'Mozilla Firefox' => ['Firefox'],
         'Opera' => ['OPR', 'Opera'],
@@ -49,9 +49,10 @@ class UserAgent
         'Trident' => ['Trident', 'MSIE'],
     ];
     protected $devices = [
+        'Desktop' => ['Windows NT', 'win32', 'Macintosh', 'Mac OS X', 'linux', 'Linux'],
         'iPad' => ['iPad'],
         'iPhone' => ['iPhone'],
-        'Samsung' => ['SAMSUNG', 'SM-G'],
+        'Samsung' => ['SAMSUNG', 'SM-'],
         'HTC' => ['HTC'],
         'Sony Xperia' => ['G8231', 'E6653'],
         'Amazon Kindle' => ['Kindle'],
